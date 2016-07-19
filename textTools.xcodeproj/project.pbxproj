@@ -20,6 +20,7 @@
 		504985991D3C7DCE0006E17A /* WWFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 504985881D3C7DCE0006E17A /* WWFileManager.m */; };
 		5049859A1D3C7DCE0006E17A /* LocalPushCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5049858B1D3C7DCE0006E17A /* LocalPushCenter.m */; };
 		5049859B1D3C7DCE0006E17A /* 工具类说明.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5049858E1D3C7DCE0006E17A /* 工具类说明.rtf */; };
+		5055DD981D3DF555008C313B /* WWplayeSound.m in Sources */ = {isa = PBXBuildFile; fileRef = 5055DD971D3DF555008C313B /* WWplayeSound.m */; };
 		9B8701D81D1EBE0F00A2CC2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8701D71D1EBE0F00A2CC2F /* main.m */; };
 		9B8701DB1D1EBE0F00A2CC2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8701DA1D1EBE0F00A2CC2F /* AppDelegate.m */; };
 		9B8701DE1D1EBE0F00A2CC2F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B8701DD1D1EBE0F00A2CC2F /* ViewController.m */; };
@@ -55,6 +56,8 @@
 		5049858B1D3C7DCE0006E17A /* LocalPushCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalPushCenter.m; sourceTree = "<group>"; };
 		5049858D1D3C7DCE0006E17A /* WWMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWMacro.h; sourceTree = "<group>"; };
 		5049858E1D3C7DCE0006E17A /* 工具类说明.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "工具类说明.rtf"; sourceTree = "<group>"; };
+		5055DD961D3DF555008C313B /* WWplayeSound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WWplayeSound.h; sourceTree = "<group>"; };
+		5055DD971D3DF555008C313B /* WWplayeSound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WWplayeSound.m; sourceTree = "<group>"; };
 		9B8701D31D1EBE0F00A2CC2F /* textTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = textTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B8701D71D1EBE0F00A2CC2F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9B8701D91D1EBE0F00A2CC2F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				5049858D1D3C7DCE0006E17A /* WWMacro.h */,
+				5055DD961D3DF555008C313B /* WWplayeSound.h */,
+				5055DD971D3DF555008C313B /* WWplayeSound.m */,
 			);
 			path = 5;
 			sourceTree = "<group>";
@@ -347,6 +352,7 @@
 				5049859A1D3C7DCE0006E17A /* LocalPushCenter.m in Sources */,
 				504985991D3C7DCE0006E17A /* WWFileManager.m in Sources */,
 				504985911D3C7DCE0006E17A /* NSObject+JSON.m in Sources */,
+				5055DD981D3DF555008C313B /* WWplayeSound.m in Sources */,
 				504985931D3C7DCE0006E17A /* UIBarButtonItem+WWExtension.m in Sources */,
 				504985941D3C7DCE0006E17A /* UIImage+WWExtension.m in Sources */,
 				504985981D3C7DCE0006E17A /* HelperUtil.m in Sources */,
