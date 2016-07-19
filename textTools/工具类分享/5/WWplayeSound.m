@@ -13,9 +13,13 @@
 
 static NSMutableDictionary *_soundIDs;
 
+static NSMutableDictionary *_players;
+
 +(void)initialize
 {
     _soundIDs =[NSMutableDictionary dictionary];
+    _players =[NSMutableDictionary dictionary];
+
 }
 
 +(void)playeSoundWithSoundName:(NSString *)soundName
@@ -34,4 +38,55 @@ static NSMutableDictionary *_soundIDs;
     AudioServicesPlayAlertSound(soundID);
 }
 
+//播放音乐
++(void)playeMusicWithMusicName:(NSString *)MusicdName
+{
+    if (!MusicdName ) {
+        NSLog(@"不能为空");
+        return;
+    }
+    
+    //1.定义播放器
+    AVAudioPlayer *player = nil;
+    
+    // 2.从字典中取player，如果取出来事空，则对应创建对用的播放器
+    player = _players[MusicdName];
+    if (!player) {
+        //2.1 获取对应的音乐资源
+        NSURL *url = [[NSBundle mainBundle] URLForResource:MusicdName withExtension:nil ];
+        //2.2 创建对应的播放器
+        player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+        //2.3 将player存入字典中
+        [_players setObject:player forKey:MusicdName];
+        
+        //2.4 准备播放
+        [player prepareToPlay];
+    }
+        //3.播放音乐
+        [player play];
+}
+
+/**占停音乐*/
++(void)pauseMusicWithMusicName:(NSString *)MusicdName
+{
+    //1.取出对应的播放器
+    AVAudioPlayer *player = _players[MusicdName];
+    //2. 判断player是否事nil
+    if (player) {
+        [player pause];
+    }
+}
+
+/**停止音乐*/
++(void)stopMusicWithMusicName:(NSString *)MusicdName
+{
+    //1.取出对应的播放器
+    AVAudioPlayer *player = _players[MusicdName];
+    //2. 判断player是否事nil
+    if (player) {
+        [player stop];
+        [_players removeObjectForKey:MusicdName];
+        player = nil;
+    }
+}
 @end
